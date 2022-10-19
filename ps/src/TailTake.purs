@@ -14,7 +14,6 @@ take n xs = go n xs Nil
     go _ Nil acc = acc
     go n (x : xs) acc = go (n - 1) xs (x : acc)
 
-
 test :: Effect Unit
 test = do
     log $ show $ take 2 (1 : 2 : 3 : 4 : 5 : Nil)
